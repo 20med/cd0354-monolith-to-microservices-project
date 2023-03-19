@@ -17,15 +17,15 @@ script:
 # Build
   - docker-compose -f docker-compose-build.yaml build --parallel
 # Tagging
-  - docker tag udagram-api-feed  20med/udagram-api-feed:v1
-  - docker tag udagram-api-user  20med/udagram-api-user:v1
-  - docker tag udagram-frontend  20med/udagram-frontend:v1
-  - docker tag reverseproxy  20med/reverseproxy:v1
+  - docker tag udagram-api-feed  medgov/udagram-api-feed:v1
+  - docker tag udagram-api-user  medgov/udagram-api-user:v1
+  - docker tag udagram-frontend  medgov/udagram-frontend:v1
+  - docker tag reverseproxy  medgov/reverseproxy:v1
 
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push 20med/udagram-api-feed:v1
-  - docker push 20med/udagram-api-user:v1
-  - docker push 20med/udagram-frontend:v1
-  - docker tag reverseproxy  20med/reverseproxy:v1
+  - docker push medgov/udagram-api-feed:v1
+  - docker push medgov/udagram-api-user:v1
+  - docker push medgov/udagram-frontend:v1
+  - docker push medgov/reverseproxy  20med/reverseproxy:v1
