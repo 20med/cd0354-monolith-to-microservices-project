@@ -28,4 +28,4 @@ after_success:
   - docker push medgov/udagram-api-feed:v1
   - docker push medgov/udagram-api-user:v1
   - docker push medgov/udagram-frontend:v1
-  - docker push medgov/reverseproxy  20med/reverseproxy:v1
+  - docker push medgov/reverseproxy:v1
