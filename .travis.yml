@@ -29,4 +29,3 @@ after_success:
   - docker push 20med/udagram-api-user:v1
   - docker push 20med/udagram-frontend:v1
   - docker tag reverseproxy  20med/reverseproxy:v1
-  - docker push 20med/:v1
