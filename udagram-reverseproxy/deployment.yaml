@@ -15,7 +15,7 @@ spec:
         service: udagram-reverseproxy
     spec:
       containers:
-      - image: omarzztelcocloud/udagram-reverseproxy:v7
+      - image: medgov/reverseproxy:v1
         name: udagram-reverseproxy
         imagePullPolicy: Always
         resources:
@@ -28,4 +28,5 @@ spec:
         ports:
         - containerPort: 8080
       restartPolicy: Always
+
 
