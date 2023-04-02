@@ -15,7 +15,7 @@ spec:
         service: udagram-reverseproxy
     spec:
       containers:
-      - image: medgov/reverseproxy:v1
+      - image: medgov/reverseproxy:v2
         name: udagram-reverseproxy
         imagePullPolicy: Always
         resources:
